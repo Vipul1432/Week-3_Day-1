@@ -254,3 +254,28 @@ async function simulateServerRequestWithAsyncAwait() {
   const response = await simulateServerRequestWithAsyncAwait();
   console.log(response.data); 
 })();
+
+
+
+/*
+    Exercise - 9
+*/
+
+const createButton = document.getElementById("createButton");
+const textInput = document.getElementById("textInput");
+const colorSelect = document.getElementById("colorSelect");
+const paragraphContainer = document.getElementById("paragraphContainer");
+
+createButton.addEventListener("click", () => {
+  const inputValue = textInput.value;
+  const selectedColor = colorSelect.value;
+
+  if (inputValue) {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = inputValue;
+    paragraph.style.color = selectedColor;
+    paragraphContainer.appendChild(paragraph);
+    textInput.value = ""; 
+  }
+});
+
