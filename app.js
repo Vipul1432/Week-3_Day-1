@@ -50,13 +50,13 @@ function getNumberInput(message) {
   }
   
   const Result = Sum(Number1, Number2);
-  console.log("The Sum of " + Number1 + " and " + Number2 + " is:", Result.toFixed(2));
+console.log("The Sum of " + Number1 + " and " + Number2 + " is:", Result.toFixed(2));
   
 /// 
 /// Exercises-3
 ///
 
-document.getElementById("clickButton").addEventListener("click", function() {
+  document.getElementById("clickButton").addEventListener("click", function() {
     alert("Button Clicked!");
   });
 
@@ -74,7 +74,7 @@ document.getElementById("clickButton").addEventListener("click", function() {
 */
 
 // count occurrences of elements in the array
-function countOccurrences(arr) {
+  function countOccurrences(arr) {
     const occurrenceCount = {};
   
     for (const element of arr) {
@@ -102,3 +102,42 @@ function countOccurrences(arr) {
   const reversedString = reverseString(inputString);
   console.log(reversedString);
   
+
+  /*
+    Exercise - 6
+  */
+
+    // get the unique numbers in an array
+    function getUniqueNumbers(...args) {
+        const uniqueNumbers = [];
+      
+        for (const number of args) {
+          if (!uniqueNumbers.includes(number)) {
+            uniqueNumbers.push(number);
+          }
+        }
+      
+        return uniqueNumbers;
+      }
+      
+      const uniqueArray = getUniqueNumbers(1, 2, 3, 2, 4, 3, 5, 6, 6);
+      console.log(uniqueArray);
+
+
+      // get the intersection of two arrays
+      function getIntersection(arr1, arr2) {
+        const intersection = [];
+      
+        for (const number of arr1) {
+          if (arr2.includes(number)) {
+            intersection.push(number);
+          }
+        }
+      
+        return intersection;
+      }
+      
+      const array1 = [1, 2, 3, 4, 5];
+      const array2 = [3, 4, 5, 6, 7];
+      const intersectionArray = getIntersection(array1, array2);
+      console.log(intersectionArray);
