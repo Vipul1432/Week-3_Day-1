@@ -45,7 +45,7 @@ function getNumberInput(message) {
   const Number1 = getNumberInput("Please Enter The First Number: ");
   const Number2 = getNumberInput("Please Enter The Second Number: ");
   
-  function Sum(num1, num2) {
+  function sum(num1, num2) {
     return num1 + num2;
   }
   
