@@ -141,3 +141,58 @@ console.log("The Sum of " + Number1 + " and " + Number2 + " is:", Result.toFixed
       const array2 = [3, 4, 5, 6, 7];
       const intersectionArray = getIntersection(array1, array2);
       console.log(intersectionArray);
+
+  /*
+      Exercise - 7
+  */
+
+      // Adding and Removing courses from the student objec
+      const student = {
+        name: "Vipul Kumar",
+        gradeLevel: 12,
+        courseNames: [],
+        addCourse(courseName) {
+          this.courseNames.push(courseName);
+        },
+        removeCourse(courseName) {
+          const index = this.courseNames.indexOf(courseName);
+          if (index !== -1) {
+            this.courseNames.splice(index, 1);
+          }
+        },
+      };
+      
+      student.addCourse("Math");
+      student.addCourse("Physics");
+      console.log(student.courseNames); 
+      
+      student.removeCourse("Physics");
+      console.log(student.courseNames); 
+
+
+      // Function to Filter Students by Course
+      function filterStudentsByCourse(students, courseName) {
+        return students.filter(student => student.courseNames.includes(courseName));
+      }
+      
+      const students = [
+        {
+          name: "Vipul",
+          gradeLevel: 11,
+          courseNames: ["Math", "Physics"],
+        },
+        {
+          name: "Divyanshu",
+          gradeLevel: 10,
+          courseNames: ["Science", "History"],
+        },
+        {
+          name: "Rahul",
+          gradeLevel: 12,
+          courseNames: ["Math", "Chemistry"],
+        },
+      ];
+      
+      const mathStudents = filterStudentsByCourse(students, "Math");
+      console.log(mathStudents);
+      
