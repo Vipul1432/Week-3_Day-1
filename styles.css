@@ -121,4 +121,39 @@ input[type="number"] {
   font-size: 30px;
   font-weight: bold;
 }
+
+/*
+    Exercise - 9
+*/
+
+#textInput {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#colorSelect {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#createButton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#paragraphContainer {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
   
