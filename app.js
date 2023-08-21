@@ -1,8 +1,21 @@
-// Prompt the user for their name
-let userName = prompt("What's your name?");
+/// 
+/// Exercises-2 
+///
 
-// Display a greeting message using an alert box
-alert(`Hello, ${userName}! Welcome to our website.`);
+
+let userName;
+
+while (true) {
+    // Prompt the user for their name
+  userName = prompt("Enter your name :");
+  
+  if (userName === null || userName.trim() === "") {
+    alert("Invalid input. Please provide a valid name.");
+  } else {
+    alert(`Hello, ${userName}! Welcome to our website.`);
+    break;
+  }
+}
 
 
 
@@ -39,5 +52,19 @@ function getNumberInput(message) {
   const Result = Sum(Number1, Number2);
   console.log("The Sum of " + Number1 + " and " + Number2 + " is:", Result.toFixed(2));
   
-  
+/// 
+/// Exercises-3
+///
+
+document.getElementById("clickButton").addEventListener("click", function() {
+    alert("Button Clicked!");
+  });
+
+
+  document.getElementById("calculateButton").addEventListener("click", function() {
+    const input1 = parseFloat(document.getElementById("input1").value);
+    const input2 = parseFloat(document.getElementById("input2").value);
+    const sum = input1 + input2;
+    document.getElementById("result").innerHTML = `Sum of ${input1} and ${input2} is <span class="colored-text">${sum}</span>`;
+  });
   
