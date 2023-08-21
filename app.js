@@ -45,7 +45,7 @@ function getNumberInput(message) {
   const Number1 = getNumberInput("Please Enter The First Number: ");
   const Number2 = getNumberInput("Please Enter The Second Number: ");
   
-  function sum(num1, num2) {
+  function Sum(num1, num2) {
     return num1 + num2;
   }
   
@@ -67,4 +67,38 @@ document.getElementById("clickButton").addEventListener("click", function() {
     const sum = input1 + input2;
     document.getElementById("result").innerHTML = `Sum of ${input1} and ${input2} is <span class="colored-text">${sum}</span>`;
   });
+  
+
+/*
+    Exercise - 5
+*/
+
+// count occurrences of elements in the array
+function countOccurrences(arr) {
+    const occurrenceCount = {};
+  
+    for (const element of arr) {
+      if (occurrenceCount[element]) {
+        occurrenceCount[element]++;
+      } else {
+        occurrenceCount[element] = 1;
+      }
+    }
+  
+    return occurrenceCount;
+  }
+
+  const inputArray = [1, 2, 3, 2, 1, 4, 5, 4, 2, 5];
+  const resultObject = countOccurrences(inputArray);
+  console.log(resultObject); 
+  
+
+  // reverse string
+  function reverseString(input) {
+    return input.split('').reverse().join('');
+  }
+  
+  const inputString = "Hello, World!";
+  const reversedString = reverseString(inputString);
+  console.log(reversedString);
   
